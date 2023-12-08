@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- 주 : 한국어 -->
+<html lang="ko">
+    <head>
+        <!-- 표준 언어 규약 -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+        
+        <!-- pybo CSS -->
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+        <title>Hello, pybo!</title>
+    </head>
+    <body>
+        <!-- 네비게이션바 -->
+        {% include "navbar.html" %}
+        <!-- 직접 입력하는 부분 content는 블록에 대한 이름이다. -->
+        {% block content %}
+        {% endblock %}
+        <!-- 기본 템플릿 안에 삽입될 내용 -->
+        
+        <!-- Bootstrap JS -->
+        <script src="{% static 'bootstrap.min.js' %}"></script>
+        
+        <!-- 자바스크립트 Start -->
+        {% block script %}
+        {% endblock %}
+        <!-- 자바스크립트 End -->
+    </body>
+</html>
