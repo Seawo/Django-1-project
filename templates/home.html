@@ -1,0 +1,134 @@
+{% extends 'base.html' %}
+{% block head %}
+<style>
+    a {
+        color: black
+        text-decoration: none;
+    }
+    img {
+        width: 30%;
+        height: auto;
+    }
+    body{
+        background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr5m6A2dQjVAONbzMA2FRYybH_AzzFoKKlFg&usqp=CAU");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .table{
+        margin:10%, 10%, 10%, 10%;
+    }
+    .tableth{
+        margin:10%;
+    }
+    td, tr{
+        border: 5px solid #666666;
+        width: 30%;
+    }
+</style>
+{% endblock %}
+{% block content %}
+<div class="container my-3">
+    <table class="table" >
+        <div class="tableth">
+            <thead >
+                <tr align="center">
+                    <th>Pybo</th>
+                    <th>Project</th>
+                    <th>NoProject</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr align="center">
+                    <!--url은 네임스페이스와 별칭으로 지정되어 있다. -->
+                    <td>
+                        <a href="{% url 'pybo:index' %}">
+                            {% load static %}
+                            <img src="{% static 'Django.png' %}" >
+                        </a>
+                    </td>
+                    <td>
+                        <a href="{% url 'ProjectOne:index' %}">
+                            {% load static %}
+                            <img src="{% static 'ProjectOne.png' %}" >
+                        </a>
+                    </td>
+
+                    <td>
+                        <a href="">
+                            {% load static %}
+                            <img src="{% static 'Noproject.png' %}" >
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </div>
+    </table>
+    <table class="table" >
+        <div class="tableth">
+            <thead>
+                <tr align="center">
+                    <th>NoProject</th>
+                    <th>NoProject</th>
+                    <th>NoProject</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr align="center">
+                    <!--url은 네임스페이스와 별칭으로 지정되어 있다. -->
+                    <td>
+                        <a href="">
+                            {% load static %}
+                            <img src="{% static 'Noproject.png' %}" >
+                        </a>
+                    </td>
+                    <td>
+                        <a href="">
+                            <img src="{% static 'Noproject.png' %}" >
+                        </a>
+                    </td>
+                    <td>
+                        <a href="">
+                            {% load static %}
+                            <img src="{% static 'Noproject.png' %}" >
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </div>
+    </table>
+    <table class="table" >
+        <div class="tableth">
+            <thead>
+                <tr align="center">
+                    <th>NoProject</th>
+                    <th>NoProject</th>
+                    <th>NoProject</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr align="center">
+                    <!--url은 네임스페이스와 별칭으로 지정되어 있다. -->
+                    <td>
+                        <a href="">
+                            {% load static %}
+                            <img src="{% static 'Noproject.png' %}" >
+                        </a>
+                    </td>
+                    <td>
+                        <a href="">
+                            <img src="{% static 'Noproject.png' %}" >
+                        </a>
+                    </td>
+                    <td>
+                        <a href="">
+                            {% load static %}
+                            <img src="{% static 'Noproject.png' %}" >
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </div>
+    </table>
+</div>
+    
+{% endblock %}
